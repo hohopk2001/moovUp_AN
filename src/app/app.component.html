@@ -179,15 +179,16 @@
 
 <main class="main">
   <div class="content">
-    <div class="left-side">
+    <div class="left-side" stlye=" max-height: 300px;overflow-y: auto;">
       <h1>Hello, {{ title }}</h1>
       <app-people-list/>
+    
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
-    <div class="right-side">
-      <div class="pill-group">
-        <app-details/>
-      </div>
+    <div class="right-side" style="height:500px;width:100%">
+      <app-details/>
+       
+     
       
     </div>
   </div>
