@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { PeopleListComponent } from './people-list-component/people-list-component.component';
 import { DetailsComponent } from './details-component/details-component.component';
+import { CalculateNodePathComponent } from './calculate-node-path/calculate-node-path.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/people', pathMatch: 'full' },
@@ -17,7 +18,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     PeopleListComponent,
-    DetailsComponent
+    DetailsComponent,
+    CalculateNodePathComponent
   ],
   imports: [
     BrowserModule,

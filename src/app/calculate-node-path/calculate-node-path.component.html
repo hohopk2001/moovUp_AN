@@ -1,0 +1,7 @@
+<button (click)="click('Short')">Find Shortest Path</button>
+<p>Shortest Path: {{ shortestPath.join(' -> ') }}</p>
+
+<button (click)="click('Possible')">Find Possible Paths</button>
+<ul *ngIf="possiblePaths.length > 0">
+  <li *ngFor="let path of possiblePaths">{{ path.join(' -> ') }}</li>
+</ul>
