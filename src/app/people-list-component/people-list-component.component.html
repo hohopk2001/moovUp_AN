@@ -1,10 +1,14 @@
+<div>
+  <app-details/>
+</div>
 <div >
   <ul class="list-view">
-    <li *ngFor="let person of people" class="list-item" (click)="navigateToDetails(person._id)">
+    <li *ngFor="let person of people; index as i" class="list-item" (click)="navigateToDetails(i)">
     
         <img [src]="person.picture" alt="Person Image" class="list-item-image">
         <span class="list-item-name">{{ person.name.first }} {{ person.name.last }}</span>
     
     </li>
   </ul>
+
 </div>

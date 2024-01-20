@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {ApiService} from '../Services/api-service';
+import { DetailsComponent } from '../details-component/details-component.component';
 
 interface Person {
   _id: any;
@@ -23,6 +24,7 @@ interface Person {
   styleUrls: ['./people-list-component.component.css']
 })
 export class PeopleListComponent implements OnInit {
+@ViewChild(DetailsComponent) detailsComponent: DetailsComponent;
 
   people: Person[] = [];
 
@@ -34,8 +36,9 @@ export class PeopleListComponent implements OnInit {
     });
   }
 
-  navigateToDetails(id: string): void {
-    this.router.navigate(['/details', id]);
+  navigateToDetails(index : number): void {
+    this.detailsComponent.updateMarker(index);
+
   }
   
   
